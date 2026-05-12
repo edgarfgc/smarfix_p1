@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartFix | Panel de Administración</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="img/logo.png">
+  <style>
+    .admin-wrapper{min-height:100vh;padding:20px;padding-top:100px}
+    .login-box{max-width:400px;margin:100px auto;background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius-lg);padding:40px;text-align:center}
+    .login-box img{height:60px;margin:0 auto 20px}
+    .login-box h2{margin-bottom:8px;font-size:1.5rem}
+    .login-box p{color:var(--gray);margin-bottom:25px;font-size:.9rem}
+    .login-box .form-group{text-align:left}
+    .login-box .btn{width:100%;justify-content:center;margin-top:10px}
+    .login-error{color:var(--danger);font-size:.85rem;margin-top:10px;display:none}
+    .admin-panel{display:none}
+    .admin-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:30px;flex-wrap:wrap;gap:15px}
+    .admin-header h1{font-size:1.8rem}
+    .admin-actions{display:flex;gap:10px;flex-wrap:wrap}
+    .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px;margin-bottom:30px}
+    .stat-card{background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius);padding:20px;text-align:center}
+    .stat-card .number{font-size:2rem;font-weight:800;background:linear-gradient(135deg,var(--green),var(--blue));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .stat-card .label{font-size:.8rem;color:var(--gray);margin-top:4px}
+    .filters{display:flex;gap:10px;margin-bottom:20px;flex-wrap:wrap;align-items:center}
+    .filters select,.filters input{padding:8px 12px;border-radius:var(--radius);border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.05);color:var(--white);font-family:'Inter',sans-serif;font-size:.85rem}
+    .filters select option{background:var(--navy)}
+    .table-wrapper{overflow-x:auto;background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius-lg);padding:5px}
+    table{width:100%;border-collapse:collapse;font-size:.85rem}
+    th{text-align:left;padding:12px 15px;border-bottom:1px solid var(--glass-border);color:var(--green);font-weight:600;font-size:.8rem;text-transform:uppercase;letter-spacing:.5px;white-space:nowrap}
+    td{padding:10px 15px;border-bottom:1px solid rgba(255,255,255,.03);vertical-align:top}
+    tr:hover td{background:rgba(125,198,63,.03)}
+    .badge{padding:4px 10px;border-radius:50px;font-size:.75rem;font-weight:600;display:inline-block}
+    .badge-pendiente{background:rgba(245,158,11,.15);color:#f59e0b}
+    .badge-presupuestado{background:rgba(58,159,214,.15);color:#3a9fd6}
+    .badge-atendido{background:rgba(125,198,63,.15);color:#7dc63f}
+    .badge-rechazado{background:rgba(239,68,68,.15);color:#ef4444}
+    .action-btns{display:flex;gap:6px}
+    .action-btn{padding:4px 8px;border-radius:6px;border:none;cursor:pointer;font-size:.75rem;font-family:'Inter',sans-serif;transition:var(--transition)}
+    .action-btn.green{background:rgba(125,198,63,.15);color:var(--green)}
+    .action-btn.red{background:rgba(239,68,68,.15);color:var(--danger)}
+    .action-btn:hover{opacity:.8}
+    .empty-state{text-align:center;padding:40px;color:var(--gray)}
+    @media(max-width:768px){.admin-wrapper{padding:10px;padding-top:80px}.filters{flex-direction:column}.admin-header{flex-direction:column;align-items:flex-start}}
+  </style>
+</head>
+<body>
+<nav class="navbar"><div class="container"><a href="/" class="navbar-logo"><img src="img/logo2.png" alt="SmartFix"></a><div class="nav-links"><a href="/">← Volver al sitio</a></div></div></nav>
+
+<div class="admin-wrapper">
+  <!-- LOGIN -->
+  <div class="login-box" id="loginBox">
+    <img src="img/logo.png" alt="SmartFix">
+    <h2>Panel Admin</h2>
+    <p>Ingresá la contraseña para acceder</p>
+    <form id="loginForm">
+      <div class="form-group">
+        <label for="adminPass">Contraseña</label>
+        <input type="password" id="adminPass" placeholder="Contraseña" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Ingresar</button>
+      <div class="login-error" id="loginError">Contraseña incorrecta</div>
+    </form>
+  </div>
+
+  <!-- ADMIN PANEL -->
+  <div class="admin-panel" id="adminPanel">
+    <div class="admin-header">
+      <h1>📊 Panel de Administración</h1>
+      <div class="admin-actions">
+        <button class="btn btn-outline" id="exportBtn" onclick="exportCSV()">📥 Exportar CSV</button>
+        <button class="btn btn-outline" onclick="logout()" style="border-color:var(--danger);color:var(--danger)">Cerrar Sesión</button>
+      </div>
+    </div>
+    <div class="stats-grid" id="statsGrid"></div>
+    <div class="filters">
+      <select id="filterEstado"><option value="">Todos los estados</option><option value="pendiente">Pendiente</option><option value="presupuestado">Presupuestado</option><option value="atendido">Atendido</option><option value="rechazado">Rechazado</option></select>
+      <select id="filterMarca"><option value="">Todas las marcas</option><option value="Samsung">Samsung</option><option value="Apple">Apple</option><option value="Motorola">Motorola</option><option value="Xiaomi">Xiaomi</option><option value="Huawei">Huawei</option><option value="LG">LG</option><option value="Otro">Otro</option></select>
+      <input type="date" id="filterDesde" title="Desde">
+      <input type="date" id="filterHasta" title="Hasta">
+      <button class="btn btn-primary" style="padding:8px 16px;font-size:.85rem" onclick="loadData()">Filtrar</button>
+    </div>
+    <div class="table-wrapper">
+      <table>
+        <thead><tr><th>ID</th><th>Fecha</th><th>Nombre</th><th>Email</th><th>Teléfono</th><th>Marca</th><th>Modelo</th><th>Falla</th><th>Monto</th><th>Estado</th><th>Acciones</th></tr></thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script src="js/admin.js"></script>
+</body>
+</html>

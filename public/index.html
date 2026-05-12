@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="SmartFix - Servicio técnico de reparación de celulares en Bahía Blanca. Presupuestos sin cargo.">
+  <title>SmartFix | Reparación Inteligente de Celulares - Bahía Blanca</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="img/logo.png">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#inicio" class="navbar-logo"><img src="img/logo2.png" alt="SmartFix"></a>
+      <div class="nav-links" id="navLinks">
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#presupuesto">Presupuesto</a>
+        <a href="#testimonios">Opiniones</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#presupuesto" class="btn btn-primary">Solicitar Presupuesto</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE NAV -->
+  <div class="mobile-nav" id="mobileNav">
+    <button class="mobile-nav-close" id="mobileNavClose">&times;</button>
+    <a href="#inicio" class="mobile-link">Inicio</a>
+    <a href="#servicios" class="mobile-link">Servicios</a>
+    <a href="#presupuesto" class="mobile-link">Presupuesto</a>
+    <a href="#testimonios" class="mobile-link">Opiniones</a>
+    <a href="#faq" class="mobile-link">FAQ</a>
+    <a href="#contacto" class="mobile-link">Contacto</a>
+    <a href="#presupuesto" class="btn btn-primary mobile-link">Solicitar Presupuesto</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg-effects">
+      <div class="orb"></div>
+      <div class="orb"></div>
+      <div class="orb"></div>
+    </div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge"><span class="dot"></span> Servicio técnico en Bahía Blanca</div>
+        <h1>Reparación <span class="highlight">inteligente</span> de celulares</h1>
+        <p>Expertos en reparación de smartphones. Diagnóstico gratuito, repuestos de calidad y garantía en cada trabajo.
+        </p>
+        <div class="hero-buttons">
+          <a href="#presupuesto" class="btn btn-primary">📱 Solicitar Presupuesto</a>
+          <a href="#servicios" class="btn btn-outline">Ver Servicios</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-number" data-target="2500">0</div>
+            <div class="stat-label">Equipos reparados</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number" data-target="8">0</div>
+            <div class="stat-label">Años de experiencia</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number" data-target="98">0</div>
+            <div class="stat-label">% Satisfacción</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-logo"><img src="img/logo.png" alt="SmartFix Logo"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section class="services" id="servicios">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="tag">Nuestros Servicios</span>
+        <h2>Soluciones para tu dispositivo</h2>
+        <p>Ofrecemos reparaciones profesionales con repuestos de alta calidad y garantía.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="service-icon"><svg viewBox="0 0 24 24">
+              <rect x="5" y="2" width="14" height="20" rx="2" />
+              <line x1="12" y1="18" x2="12" y2="18.01" />
+            </svg></div>
+          <h3>Reparación de Pantallas</h3>
+          <p>Reemplazo de pantallas rotas o dañadas con módulos originales y compatibles de alta calidad.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><svg viewBox="0 0 24 24">
+              <rect x="1" y="6" width="18" height="12" rx="2" />
+              <line x1="23" y1="13" x2="23" y2="11" />
+            </svg></div>
+          <h3>Cambio de Baterías</h3>
+          <p>Baterías nuevas de alta capacidad para que tu celular dure todo el día como el primer día.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><svg viewBox="0 0 24 24">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+            </svg></div>
+          <h3>Reparación de Carga</h3>
+          <p>Solución a problemas de carga: pin, flex, placa. Tu celular volverá a cargar correctamente.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><svg viewBox="0 0 24 24">
+              <rect x="2" y="3" width="20" height="14" rx="2" />
+              <line x1="8" y1="21" x2="16" y2="21" />
+              <line x1="12" y1="17" x2="12" y2="21" />
+            </svg></div>
+          <h3>Software / Desbloqueo</h3>
+          <p>Actualización de software, eliminación de virus, desbloqueo y restauración de sistema.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><svg viewBox="0 0 24 24">
+              <path
+                d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" />
+            </svg></div>
+          <h3>Reparación de Placa</h3>
+          <p>Microsoldadura y reparación de componentes a nivel de placa madre con equipamiento profesional.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><svg viewBox="0 0 24 24">
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg></div>
+          <h3>Diagnóstico Gratuito</h3>
+          <p>Revisamos tu equipo sin costo para darte un presupuesto detallado antes de cualquier reparación.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRESUPUESTO -->
+  <section class="budget" id="presupuesto">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="tag">Presupuesto sin cargo</span>
+        <h2>Solicitá tu presupuesto</h2>
+        <p>Completá el formulario y te contactamos con el presupuesto de reparación.</p>
+      </div>
+      <div class="budget-wrapper">
+        <div class="budget-info reveal">
+          <h3>¿Por qué elegirnos?</h3>
+          <p>En SmartFix nos comprometemos con la calidad y la transparencia en cada reparación.</p>
+          <div class="budget-features">
+            <div class="budget-feature">
+              <div class="icon">✓</div><span>Diagnóstico gratuito y sin compromiso</span>
+            </div>
+            <div class="budget-feature">
+              <div class="icon">⚡</div><span>Reparaciones en el día (según disponibilidad)</span>
+            </div>
+            <div class="budget-feature">
+              <div class="icon">🛡️</div><span>Garantía en todos nuestros trabajos</span>
+            </div>
+            <div class="budget-feature">
+              <div class="icon">📱</div><span>Repuestos de alta calidad</span>
+            </div>
+          </div>
+        </div>
+        <div class="budget-form reveal" id="budgetFormContainer">
+          <h3>📋 Datos del equipo</h3>
+          <form id="budgetForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="telefono">Teléfono / WhatsApp</label>
+              <input type="tel" id="telefono" name="telefono" placeholder="291 xxxxxxx" required>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="marca">Marca del equipo</label>
+                <select id="marca" name="marca" required>
+                  <option value="">Seleccionar marca</option>
+                  <option value="Samsung">Samsung</option>
+                  <!-- option value="Apple">Apple (iPhone)</option-->
+                  <option value="Motorola">Motorola</option>
+                  <option value="Xiaomi">Xiaomi</option>
+                  <option value="Huawei">Huawei</option>
+                  <option value="LG">LG</option>
+                  <option value="Otro">Otro</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="modelo">Modelo</label>
+                <input type="text" id="modelo" name="modelo" placeholder="Ej: Galaxy S23, Galaxy A54..." required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="falla">Descripción de la falla</label>
+              <textarea id="falla" name="falla" placeholder="Describí el problema de tu equipo..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" id="submitBtn">🔧 Enviar Solicitud</button>
+          </form>
+          <div class="form-success" id="formSuccess">
+            <div class="checkmark">✓</div>
+            <h3>¡Presupuesto enviado!</h3>
+            <p>Recibimos tu solicitud. Te contactaremos a la brevedad con el presupuesto.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section class="testimonials" id="testimonios">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="tag">Opiniones</span>
+        <h2>Lo que dicen nuestros clientes</h2>
+        <p>La satisfacción de nuestros clientes es nuestra mejor carta de presentación.</p>
+      </div>
+      <div class="testimonials-wrapper reveal">
+        <button class="nav-btn prev" id="prevTestimonial" aria-label="Anterior">
+          <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div class="testimonials-track" id="testimonialsTrack">
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">ML</div>
+              <div>
+                <div class="testimonial-name">María López</div>
+                <div class="testimonial-date">Hace 2 semanas</div>
+              </div>
+            </div>
+            <div class="testimonial-stars">★★★★★</div>
+            <div class="testimonial-text">"Llevé mi Samsung con la pantalla rota y en 2 horas estaba como nuevo. Excelente
+              atención y precio justo."</div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">CG</div>
+              <div>
+                <div class="testimonial-name">Carlos García</div>
+                <div class="testimonial-date">Hace 1 mes</div>
+              </div>
+            </div>
+            <div class="testimonial-stars">★★★★★</div>
+            <div class="testimonial-text">"Mi Samsung tenía la placa dañada y en otros lugares no me daban solución. En SmartFix lo repararon sin problemas."</div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">LR</div>
+              <div>
+                <div class="testimonial-name">Laura Rodríguez</div>
+                <div class="testimonial-date">Hace 1 mes</div>
+              </div>
+            </div>
+            <div class="testimonial-stars">★★★★★</div>
+            <div class="testimonial-text">"Profesionales de verdad. Me cambiaron la batería del Motorola y ahora dura todo
+              el día. Súper conformes."</div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">JP</div>
+              <div>
+                <div class="testimonial-name">Juan Pérez</div>
+                <div class="testimonial-date">Hace 2 meses</div>
+              </div>
+            </div>
+            <div class="testimonial-stars">★★★★★</div>
+            <div class="testimonial-text">"Rápidos, honestos y con buenos precios. Ya reparé 3 celulares de la familia
+              acá. Siempre vuelvo."</div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">AF</div>
+              <div>
+                <div class="testimonial-name">Ana Fernández</div>
+                <div class="testimonial-date">Hace 3 meses</div>
+              </div>
+            </div>
+            <div class="testimonial-stars">★★★★★</div>
+            <div class="testimonial-text">"Mi Xiaomi tenía problemas de software y me lo resolvieron en el momento.
+              Atención 10 puntos."</div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">DR</div>
+              <div>
+                <div class="testimonial-name">Diego Ramírez</div>
+                <div class="testimonial-date">Hace 3 meses</div>
+              </div>
+            </div>
+            <div class="testimonial-stars">★★★★★</div>
+            <div class="testimonial-text">"Excelente servicio técnico. Repararon la placa de mi celular que otros técnicos
+              dijeron que no se podía. Genios."</div>
+          </div>
+        </div>
+        <button class="nav-btn next" id="nextTestimonial" aria-label="Siguiente">
+          <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="tag">Preguntas Frecuentes</span>
+        <h2>¿Tenés dudas?</h2>
+        <p>Respondemos las consultas más comunes sobre nuestro servicio.</p>
+      </div>
+      <div class="faq-list reveal">
+        <div class="faq-item">
+          <div class="faq-question">¿Cuánto tarda una reparación de pantalla? <span class="arrow">▼</span></div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">La mayoría de las reparaciones de pantalla se realizan en 1 a 3 horas,
+              dependiendo del modelo y la disponibilidad del repuesto. En muchos casos, te lo entregamos en el día.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">¿Ofrecen garantía en las reparaciones? <span class="arrow">▼</span></div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Sí, todas nuestras reparaciones tienen garantía. El período varía según el
+              tipo de reparación, generalmente entre 30 y 90 días.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">¿Usan repuestos originales? <span class="arrow">▼</span></div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Trabajamos con repuestos originales y compatibles de alta calidad. Siempre te
+              informamos las opciones disponibles para que elijas la que mejor se adapte a tu presupuesto.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">¿El diagnóstico tiene costo? <span class="arrow">▼</span></div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">No, el diagnóstico es completamente gratuito y sin compromiso. Revisamos tu
+              equipo y te damos un presupuesto detallado antes de realizar cualquier trabajo.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">¿Qué marcas reparan? <span class="arrow">▼</span></div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Reparamos todas las marcas: Samsung, Motorola, Xiaomi, Huawei,
+              LG y más. Si tenés un modelo específico, consultanos y te asesoramos.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">¿Cómo puedo solicitar un presupuesto? <span class="arrow">▼</span></div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Podés completar el formulario en esta página, contactarnos por WhatsApp al 291
+              4394736, o acercarte directamente a nuestro local en Maldonado 1431, Bahía Blanca.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="contact" id="contacto">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="tag">Contacto</span>
+        <h2>¿Dónde encontrarnos?</h2>
+        <p>Visitanos en nuestro local o contactanos por cualquier medio.</p>
+      </div>
+      <div class="contact-grid reveal">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon"><svg viewBox="0 0 24 24">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg></div>
+            <div>
+              <h4>Dirección</h4>
+              <p>Maldonado 1431, Bahía Blanca</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><svg viewBox="0 0 24 24">
+                <path
+                  d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+              </svg></div>
+            <div>
+              <h4>Teléfono</h4>
+              <p>291 4394736</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
+              </svg></div>
+            <div>
+              <h4>Instagram</h4>
+              <p>@smartfix.bb</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg></div>
+            <div>
+              <h4>Horarios</h4>
+              <p>Lunes a Viernes: 9:00 - 18:00<br>Sábados: 9:00 - 13:00</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.5!2d-62.27!3d-38.72!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzjCsDQzJzEyLjAiUyA2MsKwMTYnMTIuMCJX!5e0!3m2!1ses!2sar!4v1"
+            allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <a href="#" class="footer-logo"><img src="img/logo2.png" alt="SmartFix"></a>
+        <div class="footer-links">
+          <a href="#servicios">Servicios</a>
+          <a href="#presupuesto">Presupuesto</a>
+          <a href="#testimonios">Opiniones</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+        <div class="footer-social">
+          <a href="https://instagram.com/smartfix.bb" target="_blank" aria-label="Instagram">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 SmartFix - Reparación Inteligente. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOAT -->
+  <a href="https://wa.me/5492914394736?text=Hola%20SmartFix!%20Quiero%20consultar%20por%20una%20reparación"
+    class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
